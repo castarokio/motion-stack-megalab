@@ -32,12 +32,12 @@ function resolveRequest(url) {
 if (process.argv.includes("--check")) {
   [
     "index.html",
-    "motion-stack-megalab.html",
+    "megalab.html",
     "gsap-theater.html",
     "case-studies.html",
     "lab-notes.html",
-    "motion-stack-megalab.css",
-    "motion-stack-megalab.js"
+    "megalab.css",
+    "megalab.js"
   ].forEach(file => {
     if (!fs.existsSync(path.join(root, file))) {
       throw new Error(`Missing required file: ${file}`);
@@ -70,5 +70,5 @@ http.createServer((req, res) => {
     res.end(contents);
   });
 }).listen(port, () => {
-  console.log(`Motion Stack Megalab running at http://localhost:${port}`);
+  console.log(`Megalab running at http://localhost:${port}`);
 });
