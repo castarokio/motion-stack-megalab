@@ -164,35 +164,103 @@ function setupGsapMotion() {
     });
   });
 
-  gsap.fromTo(".proof-tile",
-    { y: 80, opacity: 0, rotate: index => index % 2 ? 2.5 : -2.5 },
-    {
-      y: 0,
-      opacity: 1,
-      rotate: 0,
-      stagger: 0.05,
-      ease: "none",
-      scrollTrigger: scrubTrigger(".proof-grid", "top 92%", "top 52%", 0.7)
+  const proofTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".proof",
+      start: "top 82%",
+      end: "bottom 28%",
+      scrub: 0.85
     }
-  );
-
-  gsap.fromTo(".system-card",
-    { y: 80, opacity: 0, rotate: index => [-2, 2, -1, 1][index] || 0 },
-    {
-      y: 0,
-      opacity: 1,
-      rotate: 0,
-      stagger: 0.05,
-      ease: "none",
-      scrollTrigger: scrubTrigger(".system-grid", "top 92%", "top 52%", 0.7)
-    }
-  );
-
-  gsap.to(".system-card", {
-    y: index => index % 2 ? 28 : -28,
-    ease: "none",
-    scrollTrigger: { trigger: ".systems", start: "top bottom", end: "bottom top", scrub: 0.7 }
   });
+
+  proofTl
+    .fromTo(".proof-seal",
+      { scale: 0.2, rotate: -42, autoAlpha: 0 },
+      { scale: 1, rotate: 8, autoAlpha: 1, ease: "none" },
+      0
+    )
+    .fromTo(".proof h2",
+      { yPercent: 28, clipPath: "inset(0 0 100% 0)" },
+      { yPercent: 0, clipPath: "inset(0 0 0% 0)", ease: "none" },
+      0
+    )
+    .fromTo(".proof-tile",
+      {
+        y: index => [180, -120, 130, -90][index] || 120,
+        x: index => [-90, 70, 110, -60][index] || 0,
+        rotate: index => [-12, 9, 14, -9][index] || 0,
+        rotateX: index => index % 2 ? -22 : 18,
+        opacity: 0,
+        clipPath: "inset(42% 22% 42% 22% round 18px)"
+      },
+      {
+        y: 0,
+        x: 0,
+        rotate: 0,
+        rotateX: 0,
+        opacity: 1,
+        clipPath: "inset(0% 0% 0% 0% round 18px)",
+        stagger: 0.08,
+        ease: "none"
+      },
+      0.08
+    )
+    .fromTo(".proof-tile.image-tile img",
+      { scale: 1.42, filter: "saturate(1.6) contrast(1.18)" },
+      { scale: 1.04, filter: "saturate(1.05) contrast(1)", ease: "none" },
+      0.12
+    );
+
+  const systemsTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".systems",
+      start: "top top",
+      end: "+=1100",
+      scrub: 0.9,
+      pin: true,
+      anticipatePin: 1
+    }
+  });
+
+  systemsTl
+    .fromTo(".systems-wordmark",
+      { xPercent: -8, autoAlpha: 0.25 },
+      { xPercent: 8, autoAlpha: 0.62, ease: "none" },
+      0
+    )
+    .fromTo(".systems h2",
+      { yPercent: 24, scale: 0.92, opacity: 0.35 },
+      { yPercent: 0, scale: 1, opacity: 1, ease: "none" },
+      0
+    )
+    .fromTo(".system-card",
+      {
+        xPercent: index => [-128, -44, 44, 128][index] || 0,
+        y: index => [210, 112, 112, 210][index] || 0,
+        rotate: index => [-18, -7, 7, 18][index] || 0,
+        rotateY: index => [-28, -12, 12, 28][index] || 0,
+        scale: 0.68,
+        opacity: 0
+      },
+      {
+        xPercent: 0,
+        y: 0,
+        rotate: 0,
+        rotateY: 0,
+        scale: 1,
+        opacity: 1,
+        stagger: 0.06,
+        ease: "none"
+      },
+      0.08
+    )
+    .to(".system-card", {
+      y: index => [-34, 26, -18, 34][index] || 0,
+      rotate: index => [-2.2, 1.5, -1.5, 2.2][index] || 0,
+      filter: "drop-shadow(0 24px 0 rgba(255, 247, 223, 0.14))",
+      stagger: 0.04,
+      ease: "none"
+    }, 0.62);
 
   gsap.utils.toArray(".stack-word").forEach((word, index) => {
     gsap.fromTo(word,
@@ -205,16 +273,47 @@ function setupGsapMotion() {
     );
   });
 
-  gsap.fromTo(".map-step",
-    { y: 70, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      stagger: 0.04,
-      ease: "none",
-      scrollTrigger: scrubTrigger(".map-grid", "top 92%", "top 56%", 0.7)
+  const mapSteps = gsap.utils.toArray(".map-step");
+  const mapTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".build-map",
+      start: "top 80%",
+      end: "bottom 30%",
+      scrub: 0.8,
+      onUpdate: self => {
+        const active = Math.min(mapSteps.length - 1, Math.floor(self.progress * mapSteps.length));
+        mapSteps.forEach((step, index) => step.classList.toggle("is-current", index === active));
+      }
     }
-  );
+  });
+
+  mapTl
+    .fromTo(".map-rail span", { width: "0%" }, { width: "100%", ease: "none" }, 0)
+    .fromTo(".map-step",
+      {
+        y: index => 140 + index * 18,
+        rotate: index => [-10, 7, -6, 8, -5][index] || 0,
+        rotateX: -28,
+        opacity: 0,
+        clipPath: "inset(0 0 100% 0 round 18px)"
+      },
+      {
+        y: 0,
+        rotate: 0,
+        rotateX: 0,
+        opacity: 1,
+        clipPath: "inset(0 0 0% 0 round 18px)",
+        stagger: 0.08,
+        ease: "none"
+      },
+      0.06
+    )
+    .to(".map-step", {
+      y: index => index % 2 ? -22 : 22,
+      rotate: index => index % 2 ? 1.6 : -1.6,
+      stagger: 0.03,
+      ease: "none"
+    }, 0.68);
 }
 
 function setupDirectorScene() {
