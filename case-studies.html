@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motion Cases | Motion Stack Megalab</title>
+  <meta name="description" content="Animated motion case studies with GSAP reveals, filtering, and image-led art direction.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="motion-stack-megalab.css">
+</head>
+<body class="page-shell">
+  <header class="mega-header">
+    <a class="brand page-link" href="motion-stack-megalab.html" aria-label="Motion Stack Megalab home">
+      <span class="brand-icon">MS</span>
+      <span>Motion Stack</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="page-link" href="motion-stack-megalab.html">Home</a>
+      <a class="page-link" href="gsap-theater.html">Theater</a>
+      <a class="page-link" href="lab-notes.html">Lab Notes</a>
+    </nav>
+    <a class="header-action page-link" href="lab-notes.html">Open notes</a>
+  </header>
+
+  <main class="subpage-main">
+    <section class="case-hero" style="--hero-image: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1800&q=88');">
+      <div class="subpage-copy">
+        <span class="page-kicker">Motion Cases</span>
+        <h1>Pages with a pulse.</h1>
+        <p>Filter the board. Watch the cards breathe. This is where the motion stack turns into art direction for studios, SaaS, launches, and visual portfolios.</p>
+      </div>
+    </section>
+
+    <section class="case-grid-section">
+      <h2>Case board.</h2>
+      <div class="case-controls" aria-label="Case filters">
+        <button class="case-filter is-active" type="button" data-filter="all">All</button>
+        <button class="case-filter" type="button" data-filter="studio">Studio</button>
+        <button class="case-filter" type="button" data-filter="product">Product</button>
+        <button class="case-filter" type="button" data-filter="culture">Culture</button>
+      </div>
+      <div class="case-pro-grid">
+        <article class="case-card-pro" data-type="studio">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1100&q=88" alt="Modern studio workspace with large windows">
+          <div><span>Studio</span><h3>Agency launch wall</h3><p>Layered image cards, sticky proof, and page transitions for a premium studio.</p></div>
+        </article>
+        <article class="case-card-pro" data-type="product">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=88" alt="Laptop with digital product interface">
+          <div><span>Product</span><h3>SaaS reveal system</h3><p>Scroll-linked product panels that keep the interface readable while moving.</p></div>
+        </article>
+        <article class="case-card-pro" data-type="culture">
+          <img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1100&q=88" alt="Colorful abstract light texture">
+          <div><span>Culture</span><h3>Editorial motion spread</h3><p>Big typographic beats, image rhythm, and kinetic color for cultural pages.</p></div>
+        </article>
+        <article class="case-card-pro" data-type="studio">
+          <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1100&q=88" alt="Designer working on interface layouts">
+          <div><span>Studio</span><h3>Creative portfolio</h3><p>Directional image reveals and hover states for a memorable portfolio surface.</p></div>
+        </article>
+        <article class="case-card-pro" data-type="product">
+          <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1100&q=88" alt="Software development abstract interface">
+          <div><span>Product</span><h3>Technical product hero</h3><p>WebGL atmosphere paired with crisp product copy and controlled movement.</p></div>
+        </article>
+        <article class="case-card-pro" data-type="culture">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1100&q=88" alt="Neon retro futuristic technology screens">
+          <div><span>Culture</span><h3>Night-mode campaign</h3><p>Heavy contrast, glowing image language, and fast page wipes between scenes.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <strong>Study the recipes.</strong>
+    <a class="primary-btn page-link" href="lab-notes.html">Open lab notes</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@12.40.0/dist/dom.js"></script>
+  <script>window.FramerDom = window.Motion;</script>
+  <script src="https://cdn.jsdelivr.net/npm/motion@12.40.0/dist/motion.js"></script>
+  <script>window.MotionOne = window.Motion;</script>
+  <script type="module" src="motion-stack-megalab.js"></script>
+</body>
+</html>

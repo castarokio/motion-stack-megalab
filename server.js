@@ -30,7 +30,15 @@ function resolveRequest(url) {
 }
 
 if (process.argv.includes("--check")) {
-  ["index.html", "motion-stack-megalab.html", "motion-stack-megalab.css", "motion-stack-megalab.js"].forEach(file => {
+  [
+    "index.html",
+    "motion-stack-megalab.html",
+    "gsap-theater.html",
+    "case-studies.html",
+    "lab-notes.html",
+    "motion-stack-megalab.css",
+    "motion-stack-megalab.js"
+  ].forEach(file => {
     if (!fs.existsSync(path.join(root, file))) {
       throw new Error(`Missing required file: ${file}`);
     }

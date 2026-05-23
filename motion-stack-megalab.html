@@ -3,430 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motion Stack Megalab | Animation Library Landing Page</title>
-  <meta name="description" content="A heavy custom landing page using GSAP, Lenis, Three.js, Anime.js, AOS, Lottie, Motion One, Rive, and a Framer Motion-ready section.">
+  <title>Motion Stack Megalab | Chromatic Single Page</title>
+  <meta name="description" content="A unified colorful GSAP-heavy motion landing page with cinematic image sections and no blank-state dependency on JavaScript.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="motion-stack-megalab.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="load-curtain" id="load-curtain" aria-hidden="true">
-    <span>Motion Stack</span>
-  </div>
+  <div class="grain" aria-hidden="true"></div>
   <div class="scroll-meter" aria-hidden="true"><span id="scroll-meter-fill"></span></div>
 
-  <header class="mega-header">
+  <header class="topbar">
     <a class="brand" href="#top" aria-label="Motion Stack Megalab home">
-      <span class="brand-icon">MS</span>
-      <span>Motion Stack</span>
+      <span>MS</span>
+      <strong>Motion Stack</strong>
     </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#libraries">Libraries</a>
-      <a href="#three-stage">3D</a>
-      <a href="#interactive">Interactive</a>
+    <nav aria-label="Main navigation">
+      <a href="#rush">Rush</a>
+      <a href="#director">Director</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#studio">Studio</a>
+      <a href="#proof">Proof</a>
+      <a href="#systems">Systems</a>
       <a href="#final">Launch</a>
     </nav>
-    <a class="header-action" href="#libraries">Explore stack</a>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <canvas id="three-hero" aria-hidden="true"></canvas>
-      <div class="hero-collage" aria-label="Motion design visual collage">
-        <figure class="hero-shot shot-main">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Premium creative studio interior with glass rooms">
-        </figure>
-        <figure class="hero-shot shot-side">
-          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="Abstract architectural geometry">
-        </figure>
-        <figure class="hero-shot shot-small">
-          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85" alt="Retro futuristic screen atmosphere">
-        </figure>
-        <div class="image-caption">Web images + WebGL + scroll choreography</div>
-      </div>
+  <main id="top">
+    <section class="hero chroma-section">
+      <div class="orb orb-a" aria-hidden="true"></div>
+      <div class="orb orb-b" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow">GSAP + Lenis + Three.js + Anime + Motion One</p>
-        <h1 class="hero-title" aria-label="One landing page. Every serious motion tool.">
-          <span>One landing page.</span>
-          <span>Every serious</span>
-          <span><em>motion tool.</em></span>
+        <span class="section-code">Unified one-page build</span>
+        <h1>
+          <span>Make it</span>
+          <span>move like</span>
+          <span>pressure.</span>
         </h1>
-        <p class="hero-text">A cinematic playground that stacks scroll, 3D, vector animation, reveal systems, UI micro-motion, and interactive runtime animation into one heavy landing page.</p>
+        <p>A single loud motion page with GSAP reveals, color fields, image tunnels, kinetic cards, and animation that still leaves real content visible if scripts fail.</p>
         <div class="hero-actions">
-          <a class="primary-btn" href="#libraries">Enter the stack</a>
-          <a class="secondary-btn" href="#final">What to provide</a>
+          <a class="primary-btn" href="#rush">Start the rush</a>
+          <a class="secondary-btn" href="#gallery">See the image wall</a>
         </div>
-        <div class="hero-proof" aria-label="Motion stack highlights">
-          <span>9 installed libraries</span>
-          <span>Image-heavy sections</span>
-          <span>Scroll + 3D + vector motion</span>
+      </div>
+      <div class="hero-stage" aria-label="Chromatic motion collage">
+        <figure class="hero-frame frame-main">
+          <img src="https://images.unsplash.com/photo-1741363634242-4602722693b8?auto=format&fit=crop&w=1300&q=88" alt="Colorful geometric building facade">
+        </figure>
+        <figure class="hero-frame frame-top">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=88" alt="Retro futuristic neon screens">
+        </figure>
+        <figure class="hero-frame frame-bottom">
+          <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=900&q=88" alt="Abstract software interface visual">
+        </figure>
+        <div class="live-stack">
+          <span>GSAP timeline</span>
+          <span>Scroll-trigger color</span>
+          <span>Image mask choreography</span>
         </div>
-        <aside class="hero-console" data-aos="fade-up">
-          <div class="console-top">
-            <span>Runtime</span>
-            <strong id="runtime-count">08</strong>
-          </div>
-          <div class="console-list">
-            <span>Lenis scroll active</span>
-            <span>GSAP timelines armed</span>
-            <span>Three.js scene rendering</span>
-            <span>Rive canvas fallback ready</span>
-          </div>
-        </aside>
       </div>
     </section>
 
-    <section class="library-dock" aria-label="Motion library quick dock">
-      <a href="#libraries" class="dock-card dock-gsap">
-        <span>01</span>
-        <strong>GSAP</strong>
-        <small>Cinematic timelines</small>
-      </a>
-      <a href="#libraries" class="dock-card dock-framer">
-        <span>02</span>
-        <strong>Framer</strong>
-        <small>React transitions</small>
-      </a>
-      <a href="#libraries" class="dock-card dock-anime">
-        <span>03</span>
-        <strong>Anime.js</strong>
-        <small>Text and SVG motion</small>
-      </a>
-      <a href="#libraries" class="dock-card dock-lenis">
-        <span>04</span>
-        <strong>Lenis</strong>
-        <small>Smooth scrolling</small>
-      </a>
-      <a href="#three-stage" class="dock-card dock-three">
-        <span>05</span>
-        <strong>Three.js</strong>
-        <small>WebGL scenes</small>
-      </a>
-      <a href="#libraries" class="dock-card dock-aos">
-        <span>06</span>
-        <strong>AOS</strong>
-        <small>Scroll reveals</small>
-      </a>
-      <a href="#interactive" class="dock-card dock-lottie">
-        <span>07</span>
-        <strong>Lottie</strong>
-        <small>AE vector loops</small>
-      </a>
-      <a href="#libraries" class="dock-card dock-motion">
-        <span>08</span>
-        <strong>Motion One</strong>
-        <small>Native micro-motion</small>
-      </a>
-      <a href="#interactive" class="dock-card dock-rive">
-        <span>09</span>
-        <strong>Rive</strong>
-        <small>Interactive animation</small>
-      </a>
+    <section class="rush" id="rush">
+      <div class="rush-copy">
+        <span class="section-code">Pinned-energy section</span>
+        <h2>Color first. Motion second. Static never.</h2>
+      </div>
+      <div class="rush-lanes" aria-label="Motion lanes">
+        <div class="lane lane-a">
+          <span>GSAP</span><span>SCROLLTRIGGER</span><span>LENIS FEEL</span><span>IMAGE MASKS</span><span>PAGE HEAT</span>
+        </div>
+        <div class="lane lane-b">
+          <span>CYAN</span><span>ACID</span><span>PINK</span><span>ORANGE</span><span>VIOLET</span>
+        </div>
+        <div class="lane lane-c">
+          <span>STAGGER</span><span>SCRUB</span><span>PARALLAX</span><span>MAGNETIC</span><span>REVEAL</span>
+        </div>
+      </div>
     </section>
 
-    <section class="proof-lab" aria-label="Live animation library proof">
-      <div class="proof-head">
-        <p class="eyebrow">Live library proof</p>
-        <h2>Every installed tool has a visible job.</h2>
+    <section class="director" id="director">
+      <div class="director-pin">
+        <div class="director-copy">
+          <span class="section-code">Actual GSAP scene</span>
+          <div class="scene-copy is-active" data-scene="01">
+            <h2>Pin the viewport.</h2>
+            <p>The page stops behaving like a document and starts behaving like a directed sequence.</p>
+          </div>
+          <div class="scene-copy" data-scene="02">
+            <h2>Cut through images.</h2>
+            <p>Shutters, masks, and layers change the frame without sending the user to another page.</p>
+          </div>
+          <div class="scene-copy" data-scene="03">
+            <h2>Draw the route.</h2>
+            <p>SVG paths can become choreography: a visible signal of progress through the idea.</p>
+          </div>
+          <div class="scene-copy" data-scene="04">
+            <h2>Land the beat.</h2>
+            <p>The motion resolves into a readable end state instead of just wiggling forever.</p>
+          </div>
+        </div>
+
+        <div class="director-stage" aria-label="Pinned GSAP scene director">
+          <div class="scene-number" aria-hidden="true">01</div>
+          <div class="shutter-stack">
+            <figure class="shutter shutter-a">
+              <img src="https://images.unsplash.com/photo-1750459273454-35be3a76f35a?auto=format&fit=crop&w=1200&q=88" alt="Modern blue and teal geometric facade">
+            </figure>
+            <figure class="shutter shutter-b">
+              <img src="https://images.unsplash.com/photo-1754236742249-39549f5bba32?auto=format&fit=crop&w=1200&q=88" alt="Modern architecture with geometric contrasting colors">
+            </figure>
+            <figure class="shutter shutter-c">
+              <img src="https://images.unsplash.com/photo-1756481602921-863b17ce6f83?auto=format&fit=crop&w=1200&q=88" alt="Modern honeycomb patterned skyscraper facade">
+            </figure>
+          </div>
+          <svg class="motion-route" viewBox="0 0 620 420" aria-hidden="true">
+            <path class="route-shadow" d="M54 350 C 150 80, 250 60, 310 210 S 486 410, 566 68" />
+            <path class="route-line" d="M54 350 C 150 80, 250 60, 310 210 S 486 410, 566 68" />
+          </svg>
+          <div class="motion-dial" aria-hidden="true">
+            <span class="dial-hand"></span>
+            <strong>00%</strong>
+          </div>
+          <div class="director-console" aria-label="GSAP sequence status">
+            <span>timeline.scrub</span>
+            <span>clip-path masks</span>
+            <span>svg draw path</span>
+            <span>stateful copy</span>
+          </div>
+        </div>
       </div>
-      <div class="status-grid" aria-label="Animation runtime status">
-        <span data-status-lib="GSAP">GSAP pending</span>
-        <span data-status-lib="Lenis">Lenis pending</span>
-        <span data-status-lib="Three.js">Three.js pending</span>
-        <span data-status-lib="Anime.js">Anime.js pending</span>
-        <span data-status-lib="AOS">AOS pending</span>
-        <span data-status-lib="Lottie">Lottie pending</span>
-        <span data-status-lib="Motion One">Motion One pending</span>
-        <span data-status-lib="Rive">Rive pending</span>
-        <span data-status-lib="Framer Motion">Framer Motion installed</span>
+    </section>
+
+    <section class="manifesto" id="manifesto">
+      <div class="manifesto-track" aria-label="Motion manifesto">
+        <span>No beige templates.</span>
+        <span>No dead scroll.</span>
+        <span>No polite little cards.</span>
+        <span>Make the page hit.</span>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="section-head">
+        <span class="section-code">Image wall</span>
+        <h2>Cinematic blocks instead of empty cards.</h2>
+      </div>
+      <div class="image-wall">
+        <figure class="wall-card tall">
+          <img src="https://images.unsplash.com/photo-1741363634242-4602722693b8?auto=format&fit=crop&w=1000&q=88" alt="Colorful geometric building facade">
+          <figcaption><span>01</span><strong>Architecture heat</strong></figcaption>
+        </figure>
+        <figure class="wall-card">
+          <img src="https://images.unsplash.com/photo-1750459273454-35be3a76f35a?auto=format&fit=crop&w=1000&q=88" alt="Modern blue teal geometric facade">
+          <figcaption><span>02</span><strong>Color blast</strong></figcaption>
+        </figure>
+        <figure class="wall-card wide">
+          <img src="https://images.unsplash.com/photo-1767620511201-752fa2fdc989?auto=format&fit=crop&w=1300&q=88" alt="Modern buildings with colorful facades">
+          <figcaption><span>03</span><strong>Studio launch</strong></figcaption>
+        </figure>
+        <figure class="wall-card">
+          <img src="https://images.unsplash.com/photo-1756481602921-863b17ce6f83?auto=format&fit=crop&w=1000&q=88" alt="Modern honeycomb facade texture">
+          <figcaption><span>04</span><strong>Tech texture</strong></figcaption>
+        </figure>
+        <figure class="wall-card">
+          <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=88" alt="Designer working with interface layouts">
+          <figcaption><span>05</span><strong>Interface craft</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="studio" id="studio">
+      <div class="studio-copy">
+        <span class="section-code">Studio sequence</span>
+        <h2>Three moments. One visual system.</h2>
+      </div>
+      <div class="studio-strip">
+        <article class="studio-panel">
+          <img src="https://images.unsplash.com/photo-1754236742249-39549f5bba32?auto=format&fit=crop&w=1100&q=88" alt="Geometric modern school facade">
+          <div><span>Build</span><strong>Turn the first scroll into a statement.</strong></div>
+        </article>
+        <article class="studio-panel">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1300&q=88" alt="Retro futuristic neon screens">
+          <div><span>Direct</span><strong>Use motion to control where the eye goes.</strong></div>
+        </article>
+        <article class="studio-panel">
+          <img src="https://images.unsplash.com/photo-1767620511201-752fa2fdc989?auto=format&fit=crop&w=1100&q=88" alt="Colorful contemporary architecture">
+          <div><span>Launch</span><strong>Land every scene in a readable state.</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="proof" id="proof">
+      <div class="section-head">
+        <span class="section-code">Proof wall</span>
+        <h2>It should feel expensive before you read a word.</h2>
       </div>
       <div class="proof-grid">
-        <article class="proof-card gsap-proof">
-          <span class="lib-tag">GSAP</span>
-          <h3>Timeline sequencer</h3>
-          <div class="timeline-bars" aria-hidden="true">
-            <i></i><i></i><i></i><i></i>
-          </div>
+        <article class="proof-tile giant">
+          <span>01</span>
+          <h3>First viewport becomes a poster.</h3>
+          <p>Big type, hard color, asymmetric image stacks, and a clear action. No blank hero wrapper.</p>
         </article>
-        <article class="proof-card lenis-proof">
-          <span class="lib-tag">Lenis</span>
-          <h3>Smooth scroll engine</h3>
-          <p id="lenis-readout">Scroll velocity: waiting</p>
+        <article class="proof-tile cyan-tile">
+          <span>02</span>
+          <h3>Scroll has rhythm.</h3>
+          <p>Fast lanes, mask reveals, parallax photos, and resting beats.</p>
         </article>
-        <article class="proof-card anime-proof">
-          <span class="lib-tag">Anime.js</span>
-          <h3>Orbiting SVG-style accents</h3>
-          <div class="anime-orbit" aria-hidden="true">
-            <b></b><b></b><b></b><b></b><b></b>
-          </div>
+        <article class="proof-tile image-tile">
+          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1100&q=88" alt="Design workstation and interface screens">
         </article>
-        <article class="proof-card motion-proof">
-          <span class="lib-tag">Motion One</span>
-          <h3>Hover micro-interactions</h3>
-          <div class="motion-pads" aria-hidden="true">
-            <button type="button">Tap</button>
-            <button type="button">Hover</button>
-          </div>
-        </article>
-        <article class="proof-card framer-proof">
-          <span class="lib-tag">Framer Motion</span>
-          <h3>React animation package</h3>
-          <p>Its DOM browser build animates this card. React components can be added in a later React version.</p>
-        </article>
-        <article class="proof-card aos-proof" data-aos="flip-up">
-          <span class="lib-tag">AOS</span>
-          <h3>This card reveals through AOS</h3>
-          <p>Scroll-triggered without custom JS per element.</p>
+        <article class="proof-tile pink-tile">
+          <span>03</span>
+          <h3>Fallback stays alive.</h3>
+          <p>The composition is visible before JS. GSAP enhances it instead of rescuing it.</p>
         </article>
       </div>
     </section>
 
-    <section class="gsap-showreel" id="gsap-lab" aria-label="GSAP cinematic showreel">
-      <div class="gsap-cursor" aria-hidden="true">GSAP</div>
-      <div class="gsap-sticky">
-        <div class="gsap-copy">
-          <p class="eyebrow">GSAP heavy pass</p>
-          <h2>ScrollTrigger, timelines, masks, parallax, and magnetic UI.</h2>
-          <p>Only GSAP was added in this pass. The section below is built to show obvious GSAP behavior instead of hiding it behind static cards.</p>
-          <div class="gsap-steps" aria-label="GSAP sequence steps">
-            <span class="is-current">01 Mask reveal</span>
-            <span>02 Scrubbed panels</span>
-            <span>03 Parallax depth</span>
-            <span>04 Magnetic CTA</span>
-          </div>
-          <a class="primary-btn magnetic-link" href="#interactive">Run the motion stack</a>
-        </div>
-        <div class="gsap-stage">
-          <article class="reel-frame frame-a">
-            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=88" alt="Futuristic geometric architecture with blue glass" loading="lazy">
-            <span>Timeline split-text</span>
-          </article>
-          <article class="reel-frame frame-b">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=88" alt="Retro futuristic computer station with neon lighting" loading="lazy">
-            <span>Scrubbed image stack</span>
-          </article>
-          <article class="reel-frame frame-c">
-            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=88" alt="Abstract software code and interface visual" loading="lazy">
-            <span>Velocity depth</span>
-          </article>
-          <article class="reel-frame frame-d">
-            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=88" alt="Designer working with interface layouts" loading="lazy">
-            <span>Magnetic finish</span>
-          </article>
-        </div>
+    <section class="systems" id="systems">
+      <div class="section-head">
+        <span class="section-code">Motion systems</span>
+        <h2>Every block has a job.</h2>
       </div>
-      <div class="gsap-ticker" aria-hidden="true">
-        <span>GSAP ScrollTrigger</span><span>TimelineMax feel</span><span>Image masks</span><span>Parallax scrub</span><span>Magnetic hover</span><span>Clip-path reveals</span>
-      </div>
-    </section>
-
-    <section class="visual-stack" aria-label="Large visual motion wall">
-      <div class="stack-copy">
-        <p class="eyebrow">Image-heavy direction</p>
-        <h2>Less void. More cinema.</h2>
-      </div>
-      <div class="stack-gallery">
-        <img class="stack-img tall" src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=900&q=85" alt="Colorful abstract gradient texture" loading="lazy">
-        <img class="stack-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=85" alt="Creative team collaborating around laptops" loading="lazy">
-        <img class="stack-img wide" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1100&q=85" alt="Laptop showing digital product interface" loading="lazy">
-        <img class="stack-img" src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=85" alt="Designer working on visual interface" loading="lazy">
-      </div>
-    </section>
-
-    <section class="marquee-section" aria-label="Installed animation libraries">
-      <div class="marquee-row marquee-a">
-        <span>GSAP</span><span>Framer Motion</span><span>Anime.js</span><span>Lenis</span><span>Three.js</span><span>AOS</span><span>Lottie</span><span>Motion One</span><span>Rive</span>
-      </div>
-      <div class="marquee-row marquee-b">
-        <span>Cinematic</span><span>React-ready</span><span>Elegant</span><span>Smooth</span><span>3D</span><span>Quick reveals</span><span>Vector</span><span>Lightweight</span><span>Interactive</span>
-      </div>
-    </section>
-
-    <section class="case-board" aria-label="Motion design image board">
-      <article class="case-card case-large" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85" alt="Modern studio workspace with large windows" loading="lazy">
-        <div>
-          <span>Agency hero</span>
-          <strong>Pinned GSAP intro with product-grade image direction.</strong>
-        </div>
-      </article>
-      <article class="case-card" data-aos="fade-up" data-aos-delay="70">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Premium architectural exterior with warm light" loading="lazy">
-        <div>
-          <span>Luxury scroll</span>
-          <strong>Lenis + image parallax</strong>
-        </div>
-      </article>
-      <article class="case-card" data-aos="fade-up" data-aos-delay="140">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85" alt="Circuit board macro technology texture" loading="lazy">
-        <div>
-          <span>Tech texture</span>
-          <strong>Three.js atmosphere</strong>
-        </div>
-      </article>
-      <article class="case-card" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=85" alt="People collaborating with laptops and notes" loading="lazy">
-        <div>
-          <span>Product story</span>
-          <strong>AOS section reveals</strong>
-        </div>
-      </article>
-      <article class="case-card case-wide" data-aos="fade-up" data-aos-delay="80">
-        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=85" alt="Colorful geometric architecture" loading="lazy">
-        <div>
-          <span>Art direction</span>
-          <strong>Anime.js accents and Motion One hover states.</strong>
-        </div>
-      </article>
-    </section>
-
-    <section class="library-section" id="libraries">
-      <div class="section-head" data-aos="fade-up">
-        <p class="eyebrow">Library stack</p>
-        <h2>Each tool gets a job, not a gimmick.</h2>
-      </div>
-      <div class="library-grid">
-        <article class="library-card gsap-card" data-lib="GSAP" data-aos="fade-up">
-          <span class="lib-tag">Cinematic</span>
-          <h3>GSAP</h3>
-          <p>Controls hero choreography, scroll-linked reveals, marquee motion, and pinned stage timing.</p>
+      <div class="system-grid">
+        <article class="system-card acid">
+          <span>01</span>
+          <h3>Hero impact</h3>
+          <p>Big split text, rotating image collage, and page color pressure within the first viewport.</p>
         </article>
-        <article class="library-card" data-lib="Framer Motion" data-aos="fade-up" data-aos-delay="60">
-          <span class="lib-tag">React-ready</span>
-          <h3>Framer Motion</h3>
-          <p>Installed for React builds. This vanilla page uses Motion One for runtime UI motion.</p>
+        <article class="system-card cyan">
+          <span>02</span>
+          <h3>Scroll rush</h3>
+          <p>Horizontal lanes move at different speeds so the page feels alive while staying one unified surface.</p>
         </article>
-        <article class="library-card anime-card" data-lib="Anime.js" data-aos="fade-up" data-aos-delay="120">
-          <span class="lib-tag">Text + SVG</span>
-          <h3>Anime.js</h3>
-          <p>Runs the orbiting glyphs and delicate creative animation accents.</p>
+        <article class="system-card pink">
+          <span>03</span>
+          <h3>Image masks</h3>
+          <p>Photos reveal with scale, clip-path, and parallax instead of boring fade-only cards.</p>
         </article>
-        <article class="library-card" data-lib="Lenis" data-aos="fade-up">
-          <span class="lib-tag">Smooth scroll</span>
-          <h3>Lenis</h3>
-          <p>Creates the buttery premium scroll layer that feeds GSAP ScrollTrigger.</p>
-        </article>
-        <article class="library-card" data-lib="Three.js" data-aos="fade-up" data-aos-delay="60">
-          <span class="lib-tag">3D scene</span>
-          <h3>Three.js</h3>
-          <p>Renders the animated hero WebGL object and particle atmosphere.</p>
-        </article>
-        <article class="library-card" data-lib="AOS" data-aos="fade-up" data-aos-delay="120">
-          <span class="lib-tag">Fast reveals</span>
-          <h3>AOS</h3>
-          <p>Handles simple declarative section reveals with readable HTML attributes.</p>
-        </article>
-        <article class="library-card" data-lib="Lottie" data-aos="fade-up">
-          <span class="lib-tag">Vector loop</span>
-          <h3>Lottie</h3>
-          <p>Displays After Effects-style vector animation in the process module.</p>
-        </article>
-        <article class="library-card motion-card" data-lib="Motion One" data-aos="fade-up" data-aos-delay="60">
-          <span class="lib-tag">Native WAAPI</span>
-          <h3>Motion One</h3>
-          <p>Runs lightweight button and stat transitions through modern browser animation APIs.</p>
-        </article>
-        <article class="library-card rive-card" data-lib="Rive" data-aos="fade-up" data-aos-delay="120">
-          <span class="lib-tag">Interactive</span>
-          <h3>Rive</h3>
-          <p>Loads an interactive canvas animation when a .riv asset is available, with a polished fallback.</p>
+        <article class="system-card violet">
+          <span>04</span>
+          <h3>Fallback visible</h3>
+          <p>The page stays colored and usable without animation scripts. GSAP upgrades it, but does not own visibility.</p>
         </article>
       </div>
     </section>
 
-    <section class="demo-strip">
-      <article class="demo-tile gsap-demo" data-aos="fade-up">
-        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1000&q=85" alt="Design workstation with interface visuals" loading="lazy">
-        <div>
-          <span>GSAP</span>
-          <strong>Cinematic entrance sequencing</strong>
-        </div>
-      </article>
-      <article class="demo-tile lenis-demo" data-aos="fade-up" data-aos-delay="80">
-        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&w=1000&q=85" alt="Team reviewing digital work in a studio" loading="lazy">
-        <div>
-          <span>Lenis</span>
-          <strong>Buttery scroll narrative</strong>
-        </div>
-      </article>
-      <article class="demo-tile three-demo" data-aos="fade-up" data-aos-delay="160">
-        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1000&q=85" alt="Abstract software and interface code visual" loading="lazy">
-        <div>
-          <span>Three.js</span>
-          <strong>Live 3D atmosphere</strong>
-        </div>
-      </article>
+    <section class="stack-show">
+      <div class="stack-word">GSAP</div>
+      <div class="stack-word">COLOR</div>
+      <div class="stack-word">IMAGE</div>
+      <div class="stack-word">IMPACT</div>
     </section>
 
-    <section class="split-showcase" id="three-stage">
-      <div class="showcase-image" data-aos="fade-right">
-        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=85" alt="Abstract architectural structure with strong geometric forms" loading="lazy">
+    <section class="build-map">
+      <div class="section-head">
+        <span class="section-code">Build map</span>
+        <h2>Long page anatomy.</h2>
       </div>
-      <div class="showcase-copy" data-aos="fade-left">
-        <p class="eyebrow">Three.js stage</p>
-        <h2>3D gives the page a physical center.</h2>
-        <p>Use it for products, abstract objects, spatial UI, particles, or a hero scene that feels alive without needing a video file.</p>
-        <div class="mini-stats">
-          <span><strong>WebGL</strong> live scene</span>
-          <span><strong>Particles</strong> motion field</span>
-          <span><strong>GSAP</strong> camera timing</span>
-        </div>
+      <div class="map-grid">
+        <div class="map-step"><span>01</span><strong>Poster hero</strong><p>Immediate signal, big type, layered imagery.</p></div>
+        <div class="map-step"><span>02</span><strong>Motion rush</strong><p>Horizontal text pressure and fast kinetic rhythm.</p></div>
+        <div class="map-step"><span>03</span><strong>Image proof</strong><p>Real visual material instead of placeholder rectangles.</p></div>
+        <div class="map-step"><span>04</span><strong>System cards</strong><p>Explain the craft without losing the visual punch.</p></div>
+        <div class="map-step"><span>05</span><strong>Final blast</strong><p>Close with a strong CTA and a page that loops cleanly.</p></div>
       </div>
     </section>
 
-    <section class="interactive-section" id="interactive">
-      <div class="section-head" data-aos="fade-up">
-        <p class="eyebrow">Interactive motion</p>
-        <h2>Vector systems for product polish.</h2>
+    <section class="final" id="final">
+      <div>
+        <span class="section-code">Final beat</span>
+        <h2>This is the base. Now it can become a real brand page.</h2>
       </div>
-      <div class="interactive-grid">
-        <div class="lottie-panel" data-aos="zoom-in">
-          <div id="lottie-stage" aria-label="Looping Lottie animation"></div>
-          <h3>Lottie</h3>
-          <p>Great for lightweight animated icons, loaders, onboarding, and editorial loops.</p>
-        </div>
-        <div class="rive-panel" data-aos="zoom-in" data-aos-delay="100">
-          <canvas id="rive-stage" width="520" height="360" aria-label="Rive interactive animation"></canvas>
-          <h3>Rive</h3>
-          <p>Best when the animation needs states, pointer interaction, or app-like behavior.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="image-wall">
-      <img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=900&q=85" alt="Colorful abstract gradient used as visual texture" loading="lazy" data-aos="fade-up">
-      <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85" alt="Retro futuristic screen and technology atmosphere" loading="lazy" data-aos="fade-up" data-aos-delay="80">
-      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=85" alt="Creative team collaborating around laptops" loading="lazy" data-aos="fade-up" data-aos-delay="160">
-    </section>
-
-    <section class="final-section" id="final">
-      <div class="final-card">
-        <p class="eyebrow">To make it yours</p>
-        <h2>Send product shots, brand colors, logo, and one reference site.</h2>
-        <p>I can replace the web images, tune the color system, add a real Rive file, and convert this into a brand-specific launch page.</p>
-        <div class="asset-list" aria-label="Assets needed">
-          <span>Hero image or product render</span>
-          <span>Logo SVG/PNG</span>
-          <span>Brand colors</span>
-          <span>3 reference websites</span>
-          <span>Optional .riv or Lottie JSON</span>
-        </div>
-      </div>
+      <a class="primary-btn" href="#top">Run it again</a>
     </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.13.0/build/player/lottie.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@rive-app/canvas@2.37.8/rive.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/framer-motion@12.40.0/dist/dom.js"></script>
-  <script>window.FramerDom = window.Motion;</script>
-  <script src="https://cdn.jsdelivr.net/npm/motion@12.40.0/dist/motion.js"></script>
-  <script>window.MotionOne = window.Motion;</script>
-  <script type="module" src="motion-stack-megalab.js"></script>
+  <script src="motion-stack-megalab.js"></script>
 </body>
 </html>
