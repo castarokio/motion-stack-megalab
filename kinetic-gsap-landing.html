@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetiq Motion Lab | GSAP Landing Page</title>
+  <meta name="description" content="A custom GSAP-powered landing page concept built with kinetic typography, scroll storytelling, and premium motion design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kinetic-gsap-landing.css">
+</head>
+<body>
+  <div class="progress-track" aria-hidden="true">
+    <span id="scroll-progress"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kinetiq Motion Lab home">
+      <span class="brand-mark">K</span>
+      <span>Kinetiq</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#studio">Studio</a>
+      <a href="#system">System</a>
+      <a href="#proof">Proof</a>
+      <a href="#contact">Start</a>
+    </nav>
+    <a class="header-cta" href="#contact">Build Motion</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-stage" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="orb orb-c"></div>
+        <div class="motion-ring ring-a"></div>
+        <div class="motion-ring ring-b"></div>
+        <div class="floating-token token-one">ScrollTrigger</div>
+        <div class="floating-token token-two">Timeline</div>
+        <div class="floating-token token-three">Stagger</div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow reveal">GSAP-powered launch experience</p>
+        <h1 class="hero-title" aria-label="Make your landing page move like a premium product.">
+          <span>Make your</span>
+          <span>landing page</span>
+          <span>move like a</span>
+          <span><em>premium</em></span>
+          <span><em>product.</em></span>
+        </h1>
+        <p class="hero-text reveal">
+          A custom kinetic page concept with animated typography, scroll choreography, magnetic cards, and staged product storytelling.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="primary-action" href="#studio">Explore the Motion</a>
+          <a class="secondary-action" href="#system">View the System</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel reveal">
+        <div class="panel-top">
+          <span>Live sequence</span>
+          <span>00:18</span>
+        </div>
+        <div class="timeline-bars">
+          <span style="--w: 88%"></span>
+          <span style="--w: 62%"></span>
+          <span style="--w: 76%"></span>
+          <span style="--w: 44%"></span>
+        </div>
+        <div class="panel-metric">
+          <strong>4.8x</strong>
+          <span>more memorable than static sections</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="marquee-band" aria-label="Motion capabilities">
+      <div class="marquee-track">
+        <span>Kinetic Typography</span>
+        <span>Scroll Storytelling</span>
+        <span>Magnetic Cards</span>
+        <span>Premium Microinteractions</span>
+        <span>Timeline Choreography</span>
+        <span>Kinetic Typography</span>
+        <span>Scroll Storytelling</span>
+        <span>Magnetic Cards</span>
+      </div>
+    </section>
+
+    <section class="studio-section section" id="studio">
+      <div class="section-copy">
+        <p class="eyebrow">Motion studio</p>
+        <h2>Not decoration. Direction.</h2>
+        <p>Every animation points the eye toward the next decision: understand, trust, click, convert.</p>
+      </div>
+      <div class="motion-grid">
+        <article class="motion-card">
+          <span class="card-index">01</span>
+          <h3>Hero ignition</h3>
+          <p>Words enter in a controlled cadence, giving the headline weight before the UI moves.</p>
+        </article>
+        <article class="motion-card">
+          <span class="card-index">02</span>
+          <h3>Scroll scenes</h3>
+          <p>Sections reveal as chapters, using ScrollTrigger to keep visitors oriented and engaged.</p>
+        </article>
+        <article class="motion-card">
+          <span class="card-index">03</span>
+          <h3>Magnetic intent</h3>
+          <p>Cards respond to cursor pressure with subtle depth, without shifting the layout.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pin-section" id="system">
+      <div class="pin-copy">
+        <p class="eyebrow">Motion system</p>
+        <h2>One timeline. Many moments.</h2>
+        <p>GSAP coordinates movement across type, cards, progress, and proof points so the page feels composed instead of random.</p>
+      </div>
+      <div class="pin-visual" aria-hidden="true">
+        <div class="sequence-card card-one">
+          <span>01</span>
+          <strong>Frame intent</strong>
+        </div>
+        <div class="sequence-card card-two">
+          <span>02</span>
+          <strong>Reveal value</strong>
+        </div>
+        <div class="sequence-card card-three">
+          <span>03</span>
+          <strong>Drive action</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section section" id="proof">
+      <div class="section-copy">
+        <p class="eyebrow">Performance-minded</p>
+        <h2>Motion that respects the page.</h2>
+      </div>
+      <div class="proof-grid">
+        <div class="proof-item">
+          <strong>60fps</strong>
+          <span>transform and opacity based movement</span>
+        </div>
+        <div class="proof-item">
+          <strong>Local</strong>
+          <span>GSAP loaded from installed package</span>
+        </div>
+        <div class="proof-item">
+          <strong>Reduced</strong>
+          <span>motion preference respected in CSS and JS</span>
+        </div>
+        <div class="proof-item">
+          <strong>Responsive</strong>
+          <span>mobile-first layout without horizontal overflow</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact">
+      <p class="eyebrow">Custom landing page</p>
+      <h2>Bring images, product shots, or nothing at all.</h2>
+      <p>With real assets, this becomes brand-specific. Without assets, it becomes a polished motion-first concept driven by type, color, and choreography.</p>
+      <a class="primary-action" href="#top">Replay the Page</a>
+    </section>
+  </main>
+
+  <script src="node_modules/gsap/dist/gsap.min.js"></script>
+  <script src="node_modules/gsap/dist/ScrollTrigger.min.js"></script>
+  <script src="kinetic-gsap-landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "algerian_schools_portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node server.js --check",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@rive-app/canvas": "^2.37.8",
+    "animejs": "^4.4.1",
+    "aos": "^2.3.4",
+    "framer-motion": "^12.40.0",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.23",
+    "lottie-web": "^5.13.0",
+    "motion": "^12.40.0",
+    "three": "^0.184.0"
+  }
+}
